@@ -1,7 +1,8 @@
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
   texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
-  texlive-latex-recommended musixtex texlive-latex-contrib-musicography
+  texlive-latex-recommended musixtex
+- tlmgr install musicography
 script:
 - mkdir _build
 - latexmk -pdf -outdir=_build SeniorThesis.tex
