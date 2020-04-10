@@ -3,9 +3,9 @@ before_install:
   texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
   texlive-latex-recommended musixtex
 - mkdir texmf
-- tlmgr init-usertree
+- sudo tlmgr init-usertree
 - sudo apt-get install xzdec
-- tlmgr install musicography
+- sudo tlmgr install musicography
 script:
 - mkdir _build
 - latexmk -pdf -outdir=_build SeniorThesis.tex
