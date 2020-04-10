@@ -3,7 +3,6 @@ before_install:
   texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra
   texlive-latex-recommended musixtex
 - mkdir texmf
-- sudo tlmgr init-usertree
 - sudo apt-get install xzdec
 - sudo tlmgr install musicography
 script:
