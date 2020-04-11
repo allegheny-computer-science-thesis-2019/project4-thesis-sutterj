@@ -56,6 +56,10 @@
 %	ADD YOUR CUSTOM VALUES, COMMANDS AND PACKAGES
 %----------------------------------------------------------------------------------------
 
+\usepackage{musicography}
+
+\def\code#1{\texttt{#1}}
+
 % Open preamble/mydefinitions.tex and enter some values (name, thesis title...) 
 % and include your own custom LaTeX functions and packages
 
@@ -98,11 +102,9 @@
 %   preamble pages besides abstract are optional
 %-------------------------------------------------------------------------------
 
-% \input{preamble/abstract}
-% \input{preamble/acknowledgments}
-% \input{preamble/abbreviations}
-% \input{preamble/glossary}
-% \input{preamble/dedication}
+\input{preamble/abstract}
+\input{preamble/acknowledgments}
+\input{preamble/dedication}
 
 %-------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES
@@ -122,26 +124,20 @@
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 \mainmatter % Begin numeric (1,2,3...) page numbering
 
-%\numberedchapter{Introduction} % Title of the numbered chapter
 \input{chapters/ch01_introduction} % Introduction (first numbered chapter)
 
-%\numberedchapter{Related Work}
 \input{chapters/ch02_relatedwork}
 
-%\numberedchapter{Method Of Approach}
 \input{chapters/ch03_method}
 
-%\numberedchapter{Experimental Results}
-%\input{chapters/ch04_experiments}
+\input{chapters/ch04_experiments}
 
-%\numberedchapter{Conclusion}
-%\input{chapters/conclusion}
+\input{chapters/ch05_conclusion}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\nocite{*}
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 \unnumberedchapter{Bibliography} % Title of the unnumbered chapter
 \bibliography{preamble/bibliography} % The references information are stored in the file named "bibliography.bib"
