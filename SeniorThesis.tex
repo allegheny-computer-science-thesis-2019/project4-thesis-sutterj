@@ -57,6 +57,7 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{musicography}
+\usepackage{appendix}
 
 \def\code#1{\texttt{#1}}
 
@@ -141,5 +142,9 @@
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 \unnumberedchapter{Bibliography} % Title of the unnumbered chapter
 \bibliography{preamble/bibliography} % The references information are stored in the file named "bibliography.bib"
+
+\begin{appendices}
+\input{preamble/appendix}
+\end{appendices}
 
 \end{document}  
