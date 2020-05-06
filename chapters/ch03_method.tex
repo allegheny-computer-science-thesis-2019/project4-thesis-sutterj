@@ -220,7 +220,7 @@ It is during this part of the process that the system generates feedback on the 
 	\begin{itemize}
 		\item The melody should consist mostly of stepwise motion.  This means that there should be primarily movement by whole and half steps (conjunct motion) with some leaps (disjunct motion) added for interest.  Generally, leaps should be used to outline a climax in the phrase and work towards the resolution with stepwise motion.  It is also a good idea to keep the size of the leap no more than an octave. \\ \\
 		\code{> voiceLeading.NNoteLinearSegment(listOfNotes).melodicIntervals} \\
-		\item This function returns a list of the intervals between each consecutive note in the melody.  An iterator counts the number of conjunct and disjunct movements and generates a recommendation if the ratio of steps to leaps is less than 3:1.  If an interval is found to be greater than an octave, an additional recommendations are generated.
+		\item This function returns a list of the intervals between each consecutive note in the melody.  An iterator counts the number of conjunct and disjunct movements and generates a recommendation if the ratio of steps to leaps is less than 3:1.  If an interval is found to be greater than an octave, an additional recommendation is generated.
 	\end{itemize}
 	\item Intervals
 	\begin{itemize}
