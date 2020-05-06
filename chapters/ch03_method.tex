@@ -213,7 +213,7 @@ It is during this part of the process that the system generates feedback on the 
 	\item Range
 	\begin{itemize}
 		\item Typically, the range from the lowest note to the highest note should be under an octave and a half.  This is to make sure that the melody is within a range that most people and instruments can produce good sound. \\ \\
-		\code{> analysis.discrete.Ambitus().getPitchRanges(input)} \\
+		\code{> analysis.discrete.Ambitus().getPitchSpan(input)} \\
 		\item This function returns the difference between the lowest and highest note by calculating the pitch space.  Conditional statements are then used to determine if this is within the appropriate range.
 	\end{itemize}
 	\item Contour
@@ -225,17 +225,17 @@ It is during this part of the process that the system generates feedback on the 
 	\item Intervals
 	\begin{itemize}
 		\item When melodies do contain leaps, these leaps should be of consonant rather than dissonant intervals.  Consonant leaps include major or minor thirds or sixths, octaves, perfect fifths, and, in the case of more modern music, perfect fourths.  Following a leap, the melody should move in stepwise motion in the opposite direction as the leap.  Dissonant leaps include major or minor sevenths and tritones. \\ \\
-		\code{> interval.Interval(note1, note2.isConsonant()} \\
+		\code{> interval.Interval(note1, note2).isConsonant()} \\
 		\code{> interval.Interval(noteStart=note1, noteEnd=note2).name} \\
 		\code{> interval.Interval(noteStart=note1, noteEnd=note2).semiSimpleName} \\
 		\item The first of these functions will flag particular intervals as dissonant and then these will be saved to a list.  These particular intervals are then identified and displayed to the user using the next two functions.
 	\end{itemize}
-	\item Resolution
+	\item Key Relation
 	\begin{itemize}
-		\item It is typical when finishing a melody to end with a note from the triad built off the first scale degree (usually either the root or the fifth).  It is also possible to end with a note from the triad built off the fifth scale degree.  The first option will provide a more complete sound than the second option.  The second option will sound as if it is meant to go on. \\ \\
-		\code{> scale.MajorScale(root)} \\
-		\code{> scale.MinorScale(root)} \\
-		\item Using these two methods, it is possible to generate the pitches in a particular scale.  The pitch in the 0, 1, 2, 4, or 6 position in the list are an acceptable ending to the melody.  The preferred pitches would be 0 or 4 for a final ending and 1, 4, or 6 for an ending that would lead to something else.
+		\item Typically, the majority of the material in a melody should belong to a particular key.  If the key is E\fl Major, one should see E\fl , F, G, A\fl , B\fl , C, and D.  If there are lots of F\sh 's, then it is most likely not E\fl Major.  \\ \\
+		\code{> stream.analyze(\textquotesingle key\textquotesingle)} \\
+		\code{> stream.analyze(\textquotesingle key\textquotesingle).correlationCoefficient} \\
+		\item Using these methods, it is possible to determine the key and to determine how close the pitch content of the melody is to that key.  The closer to one the value is, the closer it is to the analyzed key.  The closer to zero the value is, the farther it is from that key.
 	\end{itemize}
 \end{itemize}
 
