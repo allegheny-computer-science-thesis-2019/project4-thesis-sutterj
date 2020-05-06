@@ -13,7 +13,7 @@ To begin this project, it was necessary to develop the composer which would func
 \subsection{Tools}
 \label{subsec:tools}
 
-The following table lists all of the tools that were used and their specific functions within the composer.  None of these tools, on their own, where capable of forming the functioning composer.  Several of these tools have very advanced sets of functions, but no single tool had all of the required functions for the composer.
+The following table lists all of the tools that were used and their specific functions within the composer.  None of these tools, on their own, were capable of forming the functioning composer.  Several of these tools have very advanced sets of functions, but no single tool had all of the required functions for the composer.
 
 \begin{table}[!htbp]
 	\centering
@@ -31,7 +31,7 @@ The following table lists all of the tools that were used and their specific fun
 \subsubsection{music21}
 \label{subsubsec:music21}
 
-music21 is a Python tool for computer analysis of music and musical data \cite{Cuthbert_2020}.  It is capable of analysis of large and small works alike with analytical categories such as harmony, form, structure, pitch content, rhythmic content, lyric content, frequency, intervals, and counterpoint.  It is capable of performing roman numeral analysis and generating post-tonal matrices.  In this project, music 21 is responsible for MusicXML generation, MIDI generation, and melodic analysis.
+music21 is a Python tool for computer analysis of music and musical data \cite{Cuthbert_2020}.  It is capable of analysis of large and small works alike with analytical categories such as harmony, form, structure, pitch content, rhythmic content, lyric content, frequency, intervals, and counterpoint.  It is capable of performing roman numeral analysis and generating post-tonal matrices.  In this project, music21 is responsible for MusicXML generation, MIDI generation, and melodic analysis.
 
 \vspace{\baselineskip}
 
@@ -39,7 +39,7 @@ music21 was chosen for this project due to its extensive analytical tools.  It i
 
 \vspace{\baselineskip}
 
-This first example demonstrates how music21 is capable of checking for consonances and dissonances between pitches.  A starting and ending pitch are given and the function returns true if the interval is consonant and false if it is dissonant.  Intervals that are considered consonant by music21 are major or minor thirds or sixths, perfect fifths, and unisons.
+This first example demonstrates how music21 is capable of checking for consonances and dissonances between pitches.  A starting and ending pitch are given and the function returns true if the interval is consonant and false if it is dissonant.  Intervals that are considered consonant by music21 are major or minor thirds or sixths, perfect fifths, unisons, and octaves.
 
 \begin{figure}[!htbp]
 	\caption{music21 Consonant Interval Checking \cite{Cuthbert_2020}}
@@ -66,7 +66,7 @@ This next example shows how music21 can identify the interval between two pitche
 	\code{\textquotesingle P8\textquotesingle } \\
 \end{figure}
 
-This last example demonstrates how music21 can provide a pitch based on a starting pitch and an interval.  Once the starting pitch and the interval are given, a function can be used to return a new pitch based on a transposition of the first pitch.
+This last example demonstrates how music21 can name a new pitch based on a starting pitch and an interval.  Once the starting pitch and the interval are given, a function can be used to return a new pitch based on a transposition of the first pitch.
 
 \begin{figure}[!htbp]
 	\caption{music21 Find Second Note Based on Interval \cite{Cuthbert_2020}}
@@ -80,7 +80,7 @@ This last example demonstrates how music21 can provide a pitch based on a starti
 \subsubsection{MIDIjs}
 \label{subsubsec:midijs}
 
-MIDIjs is a JavaScript MIDI player that works with all modern browsers and is built entirely with JavaScript \cite{MIDIjs_ND}.  This tools was chosen for this project due to its high sound quality and ability to run without requiring any sort of download.  It runs in place and requires no plugins or extensions \cite{MIDIjs_ND}.  The following example shows how to play a MIDI file using MIDIjs.
+MIDIjs is a JavaScript MIDI player that works with all modern browsers and is built entirely with JavaScript \cite{MIDIjs_ND}.  This tool was chosen for this project due to its high sound quality and ability to run without requiring any sort of download.  It runs in place and requires no plugins or extensions \cite{MIDIjs_ND}.  The following example shows how to play a MIDI file using MIDIjs.
 
 \begin{figure}[!htbp]
 	\caption{MIDIjs MIDI File Playback \cite{MIDIjs_ND}}
@@ -250,11 +250,11 @@ That being said, once the feedback is presented, the user will be able to contin
 
 \vspace{\baselineskip}
 
-If the user is presented with feedback in terms of range, the tool will point out what exactly out of range and suggest that the user alter these notes or move them down an octave.  If the user is given feedback about contour, the tool will show which specific leaps and following notes need addressed.  If there is an issue with the ratio of conjunct to disjunct movements it will highlight the leaps and make suggestions about how to alter them.
+If the user is presented with feedback in terms of range, the tool will point out what exactly is out of range and suggest that the user alter these notes or move them up or down an octave.  If the user is given feedback about contour, the tool will show which specific leaps and following notes need to be addressed.  If there is an issue with the ratio of conjunct to disjunct movements it will highlight the leaps and make suggestions about how to alter them.
 
 \vspace{\baselineskip}
 
-If the user receives feedback related to the intervals within their melody, the tool will address the specific intervals that violate the given rules and use the transposition feature, that was highlighted earlier, to present alternative pitch options to correct the error.  Additionally following each leap, the system will check to see if there is stepwise resolution using the same functions as the contour checking system.  If this is not present, the system will recommend that the user add it and show them how.  If the user gets feedback on their resolution of the melody, the system will recommend them alternate notes based on the key they have chosen.
+If the user receives feedback related to the intervals within their melody, the tool will address the specific intervals that violate the given rules and use the transposition feature, that was highlighted earlier, to present alternative pitch options to correct the error.  Additionally following each leap, the system will check to see if there is stepwise resolution using the same functions as the contour checking system.  If this is not present, the system will recommend that the user add it and show them how.  If the user gets feedback on their resolution of the melody, the system will recommend alternate notes based on the key they have chosen.
 
 \subsection{Output}
 \label{subsec:output}
@@ -330,7 +330,7 @@ This section details the background thinking and ideas that went into creating t
 \subsubsection{Design}
 \label{subsubsec:methodologydesign}
 
-It is a common debate in interface design (and design in general) whether form should follow function or vice versa.  In the case of this project, it is necessary that the design of a particular element should reveal it's function.  The user should be able to look at a particular button or slider, and without much effort, be able to figure out what it does.
+It is a common debate in interface design (and design in general) whether form should follow function or vice versa.  In the case of this project, it is necessary that the design of a particular element should reveal its function.  The user should be able to look at a particular button or slider, and without much effort, be able to figure out what it does.
 
 \vspace{\baselineskip}
 
@@ -339,7 +339,7 @@ Due the varying levels of music or computer science knowledge elements of the UI
 \subsubsection{Functions}
 \label{subsubsec:methodologyfunctions}
 
-When thinking about the functions of the interface, it must provide access to the initial setup parameters, display the note input system, provide instructions for use, provide access to the feedback system, and display the notation and playback window.  Each of these functions are required in order to be able to fully interact with the composer.
+When thinking about the functions of the interface it must: 1) provide access to the initial setup parameters; 2) display the note input system; 3) provide instructions for use; 4) provide access to the feedback system; 5) display the notation and playback window.  Each of these functions are required in order to be able to fully interact with the composer.
 
 \vspace{\baselineskip}
 
@@ -348,7 +348,7 @@ Additionally, the access to these functions must be direct.  The user must speci
 \subsubsection{Layout}
 \label{subsubsec:methodologylayout}
 
-Due to the detail required in the note input system, the layout of the UI has been optimized for desktop browser.  While it is possible to view and use the site on mobile, it is not recommended.  The design of the note input system, in its current form, cannot be made small enough to be usable on a mobile device.
+Due to the detail required in the note input system, the layout of the UI has been optimized for desktop browsers.  While it is possible to view and use the site on mobile, it is not recommended.  The design of the note input system, in its current form, cannot be made small enough to be usable on a mobile device.
 
 \vspace{\baselineskip}
 
